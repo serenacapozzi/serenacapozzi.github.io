@@ -1,0 +1,56 @@
+fs = 16px
+lh = 1.5
+
+pad = 1em
+
+mww = 60%
+
+
+pp = 100%/18
+
+c()
+  padding-left:pp;padding-right:pp; margin-left:auto;margin-right:auto;
+  @media (min-width:1400px)
+    max-width:mww; padding-left:0;padding-right:0;
+.c
+  c()
+
+wide()
+  w = (100% * 100/(100 - pp*2));
+ 
+  width:w;
+  margin-left:((100% - w)/2);
+  @media (min-width:1400px)
+    w = (100% * 100/mww)
+    width:w;
+    margin-left:((100% - w)/2);
+.wide
+  wide()
+
+html, 
+body {height: 100%;}
+
+*, *:before, *:after {box-sizing:border-box;}
+
+
+body {
+  margin:0; line-height:1.5;
+  font:400 100%/1.5 arial, sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+
+svg,
+object,
+img {max-width:100%;}
+
+a {color:inherit; text-decoration:none;}
+
+//
+// START CODING HERE :)
+//
+
+// Home
+
+body.page-home {
+  
+}

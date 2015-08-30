@@ -1,0 +1,14 @@
+{
+  "name": "my-website",
+  "version": "1.0.0",
+  "description": "1. Download the [tplsite-master.zip]() 2. Unzip it 3. Rename the folder into `myproject` 3. in a terminal, go into it: `cd path/to/myproject` 4. `make`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Antoine BERNIER <antoine.bernier@gmail.com> (http://abernier.name)",
+  "license": "ISC",
+  "dependencies": {
+    "stylus": "^0.52.0"
+  }
+}

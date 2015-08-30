@@ -1,0 +1,8 @@
+/node_modules
+/public/index.css
+/public/fonts/*iconfont/*.css
+/public/fonts/*iconfont/*.eot
+/public/fonts/*iconfont/*.svg
+/public/fonts/*iconfont/*.ttf
+/public/fonts/*iconfont/*.woff
+/public/fonts/*iconfont/*-preview.html

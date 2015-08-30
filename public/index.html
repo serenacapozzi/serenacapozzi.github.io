@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>Serena Capozzi</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="fonts/my-websiteiconfont/my-website.css">
+  <link rel="stylesheet" href="fonts/roboto/stylesheet.css">
+  <link rel="stylesheet" href="fonts/savoye/stylesheet.css">
+  <script src="vendor/modernizr.js"></script>
+</head>
+<body>
+  <div class="container c">
+    <section class="head">
+      <div class="group vcenter"><div class="in">
+        <p class="typo">Hello!</p>
+        <img class="avatar" src="images/photo.png">
+        <h1 class="h h1">i'm serena</h1>
+        <div class="infos-head">
+          <h2 class="h h2">web design</h2>
+          <h3 class="h h3">grafica e sviluppo web</h3>
+        </div>
+        <div class="contact-top">
+          <p>Tel (+39) 3287236965 - (+33) 0601005979</p>
+          <p>Mail serena.capozzi@gmail.com</p>
+        </div>
+      </div></div>
+      <div class="img wide"><img src="http://placehold.it/950x450"></div>
+    </section>
+  <!--end head-->
+    <section class="webdesign">
+      <h1 class="h h1"> web design</h1>
+      <hr class="hr">
+      <p class="p">Nullam bibendum odio a sem bibendum, ut vestibulum ipsum porttitor. convallis odio ac, vestibulum urna.</p>
+      <div class="slides wide">
+      	<div id="slideone" class="slide">
+          <div class="img"><img src="images/mc.jpg"></div>
+        </div><div id="slidetwo" class="slide">
+          <div class="img"><img src="images/mc.jpg"></div>
+        </div><div id="slidethree" class="slide">
+          <div class="img"><img src="images/mc.jpg"></div>
+        </div><div id="slidefour" class="slide">
+          <div class="img"><img src="images/mc.jpg"></div>
+        </div><div id="slidefive" class="slide">
+          <div class="img"><img src="images/mc.jpg"></div>
+        </div><div id="slidesix" class="slide">
+          <div class="img"><img src="images/mc.jpg"></div>
+        </div>
+      </div>
+      <div class="shadow wide"><nav class="nav-slides">
+        <a href="#slideone" class="target-from">
+        </a><a href="#slidetwo">
+        </a><a href="#slidethree">
+        </a><a href="#slidefour">
+        </a><a href="#slidefive">
+        </a><a href="#slidesix"></a>
+      </nav></div>
+    </section>
+    <!--end webdesign-->
+    <section class="steps">
+      <h1 class="h h1">come lavoro</h1>
+        <div class="step">
+          <div class="in">
+            <div class="icon speech"></div>
+            <p class="h">Incontro e determinazione degli obiettivi</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="in">
+            <div class="icon draft"></div>
+            <p class="h">progettazione grafica</p>
+          </div>
+        </div>
+        <div class="step end">
+          <div class="in">
+            <div class="icon development"></div>
+            <p class="h">sviluppo</p>
+          </div>
+        </div>
+    </section>
+    <!--end steps-->
+    <section class="experiments wide">
+      <div class="title cf">
+        <div class="c">
+        <h1 class="h h1">esperimenti</h1>
+        <hr class="hr">
+        <p class="p">Nullam bibendum odio a sem bibendum, ut vestibulum ipsum porttitor.</p>
+        </div>
+      </div>
+      <h2 class="h h2">motion design</h2>
+      <div class="items one">
+        <div class="item">
+          <div class="img"><img src="images/f-1.jpg"></div>
+        </div><div class="item">
+          <div class="img"><img src="images/f-2.jpg"></div>
+        </div><div class="item">
+          <div class="img"><img src="images/f-3.jpg"></div>
+        </div><div class="item">
+          <div class="img"><img src="images/f-4.jpg"></div>
+        </div>
+      </div>
+      <h2 class="h h2">motion design</h2>
+      <div class="items two">
+        <div class="item">
+          <div class="img"><img src="images/f-1.jpg"></div>
+        </div><div class="item">
+          <div class="img"><img src="images/f-2.jpg"></div>
+        </div><div class="item">
+          <div class="img"><img src="images/f-3.jpg"></div>
+        </div><div class="item">
+          <div class="img"><img src="images/f-4.jpg"></div>
+        </div>
+      </div>
+    </section>
+    <!--end experiments-->
+    <section class="contacts cf">
+      <div class="contact-bottom">
+        <h1 class="h h1">contatti</h1>
+        <hr class="hr">
+        <p>
+          <a href="tel:+39.3287236965">(+39) 3287236965</a><br>
+          <a href="tel:+33.601005979">(+33) 0601005979</a><br>
+          <a href="mailto:serena.capozzi@gmail.com?subject=hi">serena.capozzi@gmail.com</a>
+        </p>
+      </div>
+      <p class="socials">
+        <a href="javascript:void(0)" class="icon skype"></a>
+        <a href="javascript:void(0)" class="icon linkedin"></a>
+        <a href="javascript:void(0)" class="icon behance"></a>
+      </p>
+    </section>
+    <!--end contacts-->
+  </div>
+
+
+
+  <script src="vendor/jquery.js"></script>
+  <script>
+  $('.img').has('>img[src]').each(function (i, el) {
+    var $el = $(el);
+    var $img = $el.find('>img').eq(0);
+
+    $el.css('background-image', 'url(' + $img.attr('src') + ')');
+  });
+
+  </script>
+</body>
+</html>
