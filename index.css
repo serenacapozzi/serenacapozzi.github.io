@@ -1,0 +1,358 @@
+.c {
+  padding-left: 5.555555555555555%;
+  padding-right: 5.555555555555555%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 1400px) {
+  .c {
+    max-width: 60%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.wide {
+  width: 112.5%;
+  margin-left: -6.25%;
+}
+@media (min-width: 1400px) {
+  .wide {
+    width: 166.66666666666666%;
+    margin-left: -33.33333333333333%;
+  }
+}
+html,
+body {
+  height: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  line-height: 1.5;
+  font: 400 100%/1.5 arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+@media (min-device-width: 768px) {
+  body {
+    font-size: 150%;
+  }
+}
+svg,
+object,
+img {
+  max-width: 100%;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.bigimg {
+  display: block;
+}
+.img img {
+  visibility: hidden;
+}
+.img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  text-align: center;
+  width: auto;
+  margin: 0 auto;
+}
+.h {
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.h1 {
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+.h2 {
+  letter-spacing: 1px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+/* clearfix */
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+.cf:before {
+  clear: both;
+}
+/* vcenter */
+.vcenter {
+  white-space: nowrap;
+}
+.vcenter >* {
+  white-space: normal;
+}
+.vcenter:before,
+.vcenter >* {
+  display: inline-block;
+  vertical-align: middle;
+}
+.vcenter:before {
+  content: "";
+  height: 100%;
+}
+.vcenter {
+  word-spacing: -0.25em;
+}
+.vcenter >* {
+  word-spacing: normal;
+}
+.icon:before {
+  content: "";
+  font-family: "my-website";
+  display: inline-block;
+  vertical-align: middle;
+}
+.in {
+  vertica-align: top;
+}
+.hr {
+  margin-left: 3.5em;
+  margin-right: 3.5em;
+  height: 1px;
+  background-color: #ccc;
+  border: none;
+}
+/*
+section head
+*/
+section.head .group {
+  height: 61.8033988vh;
+  overflow: hidden;
+}
+section.head .group +.img {
+  height: 38.1966012vh;
+}
+section.head .avatar {
+  width: 5em;
+  border-radius: 100%;
+  border: 0.12em solid #999;
+}
+section.head .typo {
+  font-size: 3em;
+  margin: 0;
+  color: #666;
+  font-family: "savoyeregular";
+}
+section.head .h1 {
+  margin-top: 0.5em;
+  font-family: "roboto_slablight";
+}
+section.head .h2 {
+  margin-top: 0;
+  margin-bottom: 0.2em;
+  font-family: "roboto_slablight";
+}
+section.head .h3 {
+  margin-top: 0;
+  margin-bottom: 0.2em;
+  font-family: "roboto_slabthin";
+}
+section.head .infos-head {
+  border-bottom: 1px solid #ccc;
+}
+section.head .infos-head .h2 span {
+  display: block;
+}
+section.head .contact-top p {
+  font-size: 0.8em;
+  font-family: "roboto_slablight";
+}
+section.head .contact-top p:first-child {
+  margin-bottom: 0;
+}
+section.head .contact-top p:last-child {
+  margin-top: 0;
+}
+@media (min-device-width: 1024px) {
+  section.head .typo {
+    display: none;
+  }
+}
+/*
+section webdesign
+*/
+section.webdesign {
+  padding-top: 1.5em;
+}
+section.webdesign .p {
+  margin-bottom: 1.5em;
+}
+section.webdesign .h1 {
+  margin: 0;
+  font-family: "roboto_slablight";
+}
+section.webdesign .p {
+  line-height: 1.2;
+  font-size: 0.9em;
+  color: #666;
+}
+section.webdesign .slides {
+  white-space: nowrap;
+  overflow: auto;
+}
+section.webdesign .slides .slide {
+  display: inline-block;
+}
+section.webdesign .shadow {
+  position: relative;
+}
+section.webdesign .shadow:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-left: 1em solid #fff;
+  border-right: 1em solid #fff;
+  pointer-events: none;
+}
+section.webdesign .nav-slides {
+  white-space: nowrap;
+  overflow: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+section.webdesign .nav-slides a {
+  display: inline-block;
+  vertical-align: top;
+  width: 33.333333%;
+  height: 2.6em;
+  background: #d0d0d0;
+  margin-right: 1em;
+}
+section.webdesign .nav-slides a.target-from {
+  background: #342e35;
+}
+section.webdesign .nav-slides a:first-child {
+  margin-left: 1em;
+}
+/*
+section steps
+*/
+section.steps {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  padding-top: 1.5em;
+/* icons steps */
+}
+section.steps .h1 {
+  margin-top: 0;
+}
+section.steps .step {
+  margin: 0 auto;
+}
+section.steps .end {
+  padding-bottom: 2.5em;
+}
+section.steps .h1 {
+  font-family: "roboto_slablight";
+}
+section.steps p {
+  font-family: "roboto_slablight";
+  letter-spacing: 0.1em;
+  margin-top: 0;
+}
+section.steps .icon {
+  color: #333;
+  font-size: 700%;
+}
+section.steps .icon:before {
+  line-height: 1;
+}
+section.steps .icon.speech:before {
+  content: "\f101";
+}
+section.steps .icon.draft:before {
+  content: "\f102";
+}
+section.steps .icon.development:before {
+  content: "\f103";
+}
+/*
+section experiments
+*/
+section.experiments .title {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+section.experiments .h1 {
+  margin-top: 0;
+}
+section.experiments .p {
+  margin-bottom: 0;
+}
+section.experiments .title {
+  background-color: #342e35;
+}
+section.experiments .h1 {
+  margin-bottom: 0;
+  color: #fff;
+  font-family: "roboto_slablight";
+}
+section.experiments .h2 {
+  color: #666;
+  font-family: "roboto_slablight";
+  font-size: 1em;
+}
+section.experiments .p {
+  line-height: 1.2;
+  font-size: 0.9em;
+  color: #a6a8b2;
+}
+section.experiments .item {
+  display: inline-block;
+  width: 50%;
+}
+/*
+section contacts
+*/
+section.contacts {
+  padding-top: 1.5em;
+/* icons steps */
+}
+section.contacts .h1 {
+  margin-top: 0;
+}
+section.contacts .h1 {
+  margin-bottom: 0;
+  font-family: "roboto_slablight";
+}
+section.contacts p {
+  font-size: 1em;
+  font-family: "roboto_slablight";
+}
+section.contacts .socials .icon {
+  display: inline-block;
+  font-size: 2em;
+  color: #333;
+}
+section.contacts .skype:before {
+  content: "\f106";
+}
+section.contacts .behance:before {
+  content: "\f104";
+}
+section.contacts .linkedin:before {
+  content: "\f105";
+}
