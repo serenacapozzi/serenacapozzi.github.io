@@ -1,4 +1,3 @@
-@import "jquery.bxslider.css";
 .c {
   padding-left: 5.555555555555555%;
   padding-right: 5.555555555555555%;
@@ -60,6 +59,9 @@ svg,
 object,
 img {
   max-width: 100%;
+}
+img[src][width] {
+  height: auto;
 }
 a {
   color: inherit;
@@ -275,13 +277,37 @@ section.webdesign a {
   display: block;
   position: relative;
 }
+section.webdesign .slides .img >img {
+  width: 100%;
+}
 section.webdesign .slides {
   white-space: nowrap;
   overflow: auto;
   position: relative;
 }
+section.webdesign .slides.carouselscrollview {
+  overflow: hidden;
+}
+section.webdesign .slides.carouselscrollview +.shadow .nav-slides {
+  overflow: hidden;
+}
 section.webdesign .slide {
   display: inline-block;
+  width: 100%;
+}
+section.webdesign .slide a {
+  padding-top: 69.71428571428572%;
+  position: relative;
+}
+section.webdesign .slide a >.in {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+section.webdesign .slide:not(.active) {
+  opacity: 0.75;
 }
 section.webdesign .rollover {
   transition-duration: 1s;
@@ -298,6 +324,9 @@ section.webdesign .rollover {
 section.webdesign .rollover:hover {
   opacity: 0.7;
   transition-duration: 1s;
+}
+section.webdesign .rollover .subinner {
+  display: block;
 }
 section.webdesign .inner {
   display: inline-block;
@@ -357,16 +386,13 @@ section.webdesign .nav-slides a {
   background: #d0d0d0;
   margin-right: 1em;
 }
-section.webdesign .nav-slides a.target-from {
+section.webdesign .nav-slides a.active {
   background: #342e35;
 }
 section.webdesign .nav-slides a:first-child {
   margin-left: 1em;
 }
 @media (min-width: 1024px) {
-  section.webdesign .nav-slides {
-    display: none;
-  }
   section.webdesign .nav-slides a {
     width: 19%;
   }
@@ -561,4 +587,119 @@ section.list p {
   border-top: 1px solid #ccc;
   padding-top: 0.3em;
   padding-bottom: 0.3em;
+}
+/*
+lightbox
+*/
+.lightbox {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+  background: rgba(0,0,0,0.8);
+  overflow: auto;
+}
+.lightbox {
+  text-align: center;
+}
+.lightbox {
+  white-space: nowrap;
+}
+.lightbox * {
+  white-space: normal;
+  white-space: initial;
+}
+.lightbox:before {
+  content: " ";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 0;
+}
+.lightbox img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+/* max-height:100%;*/
+}
+.lightbox nav {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  margin: 0.5em;
+}
+.lightbox nav a+a {
+  margin-left: 0.25em;
+}
+.lightbox .kbd {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 0.5em;
+  border-radius: 3px;
+}
+.lightbox kbd {
+  font-family: inherit;
+  font-size: 50%;
+  vertical-align: middle;
+}
+.lightbox kbd:before {
+  content: "(";
+}
+.lightbox kbd:after {
+  content: ")";
+}
+.lightbox a {
+  text-decoration: none;
+  opacity: 0.5;
+}
+.lightbox a:hover,
+.lightbox a:active,
+.lightbox a.active {
+  opacity: 1;
+}
+.lightbox a.disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+.lightbox .close {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  margin: 0.5em;
+}
+.lightbox .demo {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  margin: 0.5em;
+  background: #feef70;
+  color: #000;
+  opacity: 0.8;
+  text-align: left;
+  max-width: 60%;
+}
+.lightbox .demo:after {
+  content: attr(href);
+  display: block;
+  font-size: 50%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.lightbox .demo:hover:after {
+  max-width: 99em;
+}
+.lightbox .meter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 0%;
+  height: 3px;
+  background: #feef70;
 }
