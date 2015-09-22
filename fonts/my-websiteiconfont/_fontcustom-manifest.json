@@ -1,0 +1,74 @@
+{
+  "checksum": {
+    "previous": "88ce2225c8df438e3a78067427fd0aaecb1943a7d3f3a0866846a97bb1188565",
+    "current": "88ce2225c8df438e3a78067427fd0aaecb1943a7d3f3a0866846a97bb1188565"
+  },
+  "fonts": [
+    "./my-website.ttf",
+    "./my-website.svg",
+    "./my-website.woff",
+    "./my-website.eot"
+  ],
+  "glyphs": {
+    "behance": {
+      "codepoint": 61700,
+      "source": "src/behance.svg"
+    },
+    "development": {
+      "codepoint": 61699,
+      "source": "src/development.svg"
+    },
+    "draft": {
+      "codepoint": 61698,
+      "source": "src/draft.svg"
+    },
+    "dummy": {
+      "codepoint": 61696,
+      "source": "src/dummy.svg"
+    },
+    "linkedin": {
+      "codepoint": 61701,
+      "source": "src/linkedin.svg"
+    },
+    "skype": {
+      "codepoint": 61702,
+      "source": "src/skype.svg"
+    },
+    "speech": {
+      "codepoint": 61697,
+      "source": "src/speech.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": false,
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "my-website",
+    "force": false,
+    "input": {
+      "templates": "src/",
+      "vectors": "src/"
+    },
+    "no_hash": true,
+    "output": {
+      "css": ".",
+      "fonts": ".",
+      "preview": "."
+    },
+    "preprocessor_path": null,
+    "quiet": true,
+    "templates": [
+      "preview",
+      "css"
+    ]
+  },
+  "templates": [
+    "./my-website-preview.html",
+    "./my-website.css"
+  ]
+}

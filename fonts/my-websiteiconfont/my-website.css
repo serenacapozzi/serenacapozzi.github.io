@@ -44,10 +44,10 @@
   font-smoothing: antialiased;
 }
 
-.icon-behance:before { content: "\f104"; }
-.icon-development:before { content: "\f103"; }
+.icon-behance:before { content: "\f100"; }
+.icon-development:before { content: "\f101"; }
 .icon-draft:before { content: "\f102"; }
-.icon-dummy:before { content: "\f100"; }
-.icon-linkedin:before { content: "\f105"; }
-.icon-skype:before { content: "\f106"; }
-.icon-speech:before { content: "\f101"; }
+.icon-dummy:before { content: "\f103"; }
+.icon-linkedin:before { content: "\f104"; }
+.icon-skype:before { content: "\f105"; }
+.icon-speech:before { content: "\f106"; }

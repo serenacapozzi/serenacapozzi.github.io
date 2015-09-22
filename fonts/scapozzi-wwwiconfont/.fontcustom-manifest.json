@@ -1,0 +1,50 @@
+{
+  "checksum": {
+    "previous": "ea70294c2c45098271ec0b379a89f8c118bfe2abcc33ef4bc1343f2500b1ca1d",
+    "current": "ea70294c2c45098271ec0b379a89f8c118bfe2abcc33ef4bc1343f2500b1ca1d"
+  },
+  "fonts": [
+    "./scapozzi-www.ttf",
+    "./scapozzi-www.svg",
+    "./scapozzi-www.woff",
+    "./scapozzi-www.eot"
+  ],
+  "glyphs": {
+    "dummy": {
+      "codepoint": 61696,
+      "source": "src/dummy.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": false,
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "scapozzi-www",
+    "force": false,
+    "input": {
+      "templates": "src/",
+      "vectors": "src/"
+    },
+    "no_hash": true,
+    "output": {
+      "css": ".",
+      "fonts": ".",
+      "preview": "."
+    },
+    "preprocessor_path": null,
+    "quiet": true,
+    "templates": [
+      "preview",
+      "css"
+    ]
+  },
+  "templates": [
+    "./scapozzi-www-preview.html",
+    "./scapozzi-www.css"
+  ]
+}
