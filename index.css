@@ -154,7 +154,7 @@ a {
 section head
 */
 section.head .group {
-  height: 61.8033988vh;
+  height: 100vh;
   overflow: hidden;
 }
 section.head .group +.img {
