@@ -163,7 +163,14 @@ section.head .group +.img {
 section.head .avatar {
   width: 5em;
   border-radius: 100%;
-  border: 0.12em solid #999;
+  border: 0.1em solid #999;
+}
+section.head .icon {
+  color: #333;
+  font-size: 700%;
+}
+section.head .serena:before {
+  content: "\f101";
 }
 section.head .typo {
   font-size: 3em;
@@ -498,6 +505,7 @@ section.experiments .item >a {
   section.experiments .item {
     display: inline-block;
     width: 50%;
+    vertical-align: top;
   }
 }
 @media (min-device-width: 1024px) {
