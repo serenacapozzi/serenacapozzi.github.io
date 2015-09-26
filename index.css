@@ -524,7 +524,7 @@ section.experiments .item >a {
 @media (min-device-width: 1024px) {
   section.experiments .item {
     display: inline-block;
-    width: 25%;
+    width: 50%;
   }
 }
 section.experiments .img {
