@@ -9,6 +9,16 @@
   <link rel="stylesheet" href="fonts/roboto/stylesheet.css">
   <link rel="stylesheet" href="fonts/savoye/stylesheet.css">
   <script src="vendor/modernizr.js"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68129822-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </head>
 <body>
   <div class="container c">
@@ -32,12 +42,14 @@
     </section>
   <!--end head-->
     <section class="webdesign">
+      <div class="title wide cf">
       <h1 class="h h1">web design</h1>
       <!--<hr class="hr">
-      <p class="p">Nullam bibendum odio a sem bibendum, ut vestibulum ipsum porttitor. convallis odio ac, vestibulum urna.--></p>
+      <p class="p">Nullam bibendum odio a sem bibendum, ut vestibulum ipsum porttitor. convallis odio ac, vestibulum urna.</p>-->
+      </div>
       <div class="wide"><div class="slides gallery"><div class="in">
       	<div id="slideone" class="slide">
-          <a href="images/jenniferscreenshot.jpg"><div class="in">
+          <a href="images/jenniferscreenshot.jpg" data-lightbox-demo="http://www.jennyfer.com/fr-fr/collection/"><div class="in">
             <span class="rollover vcenter"><span class="in">
               <span class="h1 inner">jennifer</span>
               <span class="subinner">web design-integrazione</span>
@@ -377,6 +389,8 @@
       });
     });
   }).call(this);
+
+
   </script>
 </body>
 </html>
