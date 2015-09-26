@@ -5,7 +5,7 @@
   <title>Serena Capozzi</title>
   <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no">
   <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="fonts/my-websiteiconfont/my-website.css">
+  <link rel="stylesheet" href="fonts/scapozzi-wwwiconfont/scapozzi-www.css">
   <link rel="stylesheet" href="fonts/roboto/stylesheet.css">
   <link rel="stylesheet" href="fonts/savoye/stylesheet.css">
   <script src="vendor/modernizr.js"></script>
@@ -35,7 +35,7 @@
       <h1 class="h h1">web design</h1>
       <hr class="hr">
       <p class="p"><!--Nullam bibendum odio a sem bibendum, ut vestibulum ipsum porttitor. convallis odio ac, vestibulum urna.--></p>
-      <div class="slides wide gallery">
+      <div class="wide"><div class="slides gallery"><div class="in">
       	<div id="slideone" class="slide">
           <a href="images/jenniferscreenshot.jpg"><div class="in">
             <span class="rollover vcenter"><span class="in">
@@ -100,8 +100,7 @@
             </span></span>
             <div class="img"><img width="1400" height="976" src="images/pragmatan.jpg"></div>
           </div></a>
-        </div>
-        <div id="slidenine" class="slide">
+        </div><div id="slidenine" class="slide">
           <a href="images/onesongscreenshot.jpg"><div class="in">
             <span class="rollover vcenter"><span class="in">
               <span class="h1 inner">one song</span>
@@ -110,20 +109,10 @@
             <div class="img"><img width="1400" height="976" src="images/onesong.jpg"></div>
           </div></a>
         </div>
-      </div>
-      <div class="shadow wide"><nav class="nav-slides">
-        <a href="#slideone" class="active">
-        </a><a href="#slidetwo">
-        </a><a href="#slidethree">
-        </a><a href="#slidefour">
-        </a><a href="#slidefive">
-        </a><a href="#slidesix">
-        </a><a href="#slideseven">
-        </a><a href="#slideeight">
-        </a><a href="#slidenine">
-        </a>
-
-      </nav></div>
+      </div></div></div>
+      <div class="shadow wide"><nav class="nav-slides"><div class="in">
+        <a href="#slideone" class="active"></a><a href="#slidetwo"></a><a href="#slidethree"></a><a href="#slidefour"></a><a href="#slidefive"></a><a href="#slidesix"></a><a href="#slideseven"></a><a href="#slideeight"></a><a href="#slidenine"></a>
+      </div></nav></div>
     <!-- refs hide-->
       <div id="contentRef" class="wide">
         <div class="content">
@@ -308,6 +297,33 @@
       e.preventDefault();
     });
 
+    var $window = $(window);
+    var offset = {
+      one: undefined,
+      two: undefined
+    };
+    window.offset = offset;
+    function setOffsetOne() {
+      if ($window.width() <= 1024) {
+        offset.one = 0;
+      } else {
+        offset.one = -1*carouselScrollView.$items.eq(0).width();
+      }
+
+      carouselScrollView.options.offset.left = offset.one;
+      //scrolllocalnav();
+    }
+    function setOffsetTwo() {
+      if ($window.width() <= 1024) {
+        offset.two = -1*$pagesNav.eq(0).width();
+      } else {
+        offset.two = -1*2*$pagesNav.eq(0).width();
+      }
+
+      carouselScrollViewNav.options.offset.left = offset.two;
+      //scrolllocalnav();
+    }
+
     var carouselScrollView = new CarouselScrollView({
       el: $slides,
       items: $slide,
@@ -315,42 +331,31 @@
       //next: $el.find('a[rel="next"]'),
       pagesNav: $pagesNav,
       noloop: true,
-      autoprevnext: false
+      autoprevnext: false,
+      cb: function () {carouselScrollView.go(0);}
     });
-    window.carouselScrollView = carouselScrollView;
+    carouselScrollView.on('frozedims', setOffsetOne);
 
-    var $window = $(window);
-    var offset = {
-      one: undefined,
-      two: undefined
-    };
-    window.offset = offset;
-    function setOffsets() {
-      console.log('toto');
-      if ($window.width() <= 1024) {
-        offset.one = 0;
-        offset.two = -1*$pagesNav.eq(0).width();
-      } else {
-        offset.one = -1*carouselScrollView.$items.eq(0).width();
-        offset.two = -1*2*$pagesNav.eq(0).width();
+    var carouselScrollViewNav = new CarouselScrollView({
+      el: $localpagingul,
+      items: $pagesNav,
+      noloop: true,
+      autoprevnext: false,
+      cb: function () {
+        carouselScrollViewNav.go(0); 
       }
-
-      carouselScrollView.options.offset.left = offset.one;
-      scrolllocalnav();
-    }
-    setOffsets();
-    $window.on('resize', _.debounce(setOffsets, 200));
-
+    });
+    carouselScrollViewNav.on('frozedims', function () {
+      setOffsetTwo();
+    }.bind(this));
     function scrolllocalnav() {
-      $localpagingul.stop(true, true).scrollTo($pagesNav.eq(carouselScrollView.currentIndex), 300, {offset: {left: offset.two}});
+      carouselScrollViewNav.go(carouselScrollView.currentIndex);
     }
 
+    
     carouselScrollView.on('carouselchange', function () {
       scrolllocalnav();
     });
-
-    // init carousel
-    carouselScrollView.go(0);
 
   }).call(this);
 

@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "ea70294c2c45098271ec0b379a89f8c118bfe2abcc33ef4bc1343f2500b1ca1d",
-    "current": "ea70294c2c45098271ec0b379a89f8c118bfe2abcc33ef4bc1343f2500b1ca1d"
+    "previous": "4493873b73548dec85d520cf5662160d9195d90752f4964982f7cd2a402e03f6",
+    "current": "4493873b73548dec85d520cf5662160d9195d90752f4964982f7cd2a402e03f6"
   },
   "fonts": [
     "./scapozzi-www.ttf",
@@ -10,9 +10,33 @@
     "./scapozzi-www.eot"
   ],
   "glyphs": {
-    "dummy": {
+    "behance": {
       "codepoint": 61696,
+      "source": "src/behance.svg"
+    },
+    "development": {
+      "codepoint": 61697,
+      "source": "src/development.svg"
+    },
+    "draft": {
+      "codepoint": 61698,
+      "source": "src/draft.svg"
+    },
+    "dummy": {
+      "codepoint": 61699,
       "source": "src/dummy.svg"
+    },
+    "linkedin": {
+      "codepoint": 61700,
+      "source": "src/linkedin.svg"
+    },
+    "skype": {
+      "codepoint": 61701,
+      "source": "src/skype.svg"
+    },
+    "speech": {
+      "codepoint": 61702,
+      "source": "src/speech.svg"
     }
   },
   "options": {

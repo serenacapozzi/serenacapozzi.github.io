@@ -93,6 +93,10 @@ a {
 * {
   -webkit-tap-highlight-color: transparent;
 }
+/* carouselscrollview */
+.carouselscrollview >.in {
+  transition: transform 0.3s;
+}
 /* clearfix */
 .cf:before,
 .cf:after {
@@ -126,7 +130,7 @@ a {
 }
 .icon:before {
   content: "";
-  font-family: "my-website";
+  font-family: "scapozzi-www";
   display: inline-block;
   vertical-align: middle;
 }
@@ -168,9 +172,6 @@ section.head .avatar {
 section.head .icon {
   color: #333;
   font-size: 700%;
-}
-section.head .serena:before {
-  content: "\f101";
 }
 section.head .typo {
   font-size: 3em;
@@ -287,20 +288,25 @@ section.webdesign a {
 section.webdesign .slides .img >img {
   width: 100%;
 }
-section.webdesign .slides {
-  white-space: nowrap;
+section.webdesign .nav-slides {
   overflow: auto;
-  position: relative;
+}
+section.webdesign .nav-slides.carouselscrollview {
+  overflow: hidden;
+}
+section.webdesign .slides {
+  overflow: auto;
 }
 section.webdesign .slides.carouselscrollview {
   overflow: hidden;
 }
-section.webdesign .slides.carouselscrollview +.shadow .nav-slides {
-  overflow: hidden;
+section.webdesign .slides >.in {
+  white-space: nowrap;
 }
 section.webdesign .slide {
   display: inline-block;
   width: 100%;
+  background-color: #ccc;
 }
 section.webdesign .slide a {
   padding-top: 69.71428571428572%;
@@ -388,21 +394,28 @@ section.webdesign .nav-slides {
 section.webdesign .nav-slides a {
   display: inline-block;
   vertical-align: top;
-  width: 33.333333%;
   height: 2.6em;
   background: #d0d0d0;
-  margin-right: 1em;
+  width: 33.333333333333336%;
+  position: relative;
 }
 section.webdesign .nav-slides a.active {
   background: #342e35;
 }
-section.webdesign .nav-slides a:first-child {
-  margin-left: 1em;
-}
 @media (min-width: 1024px) {
   section.webdesign .nav-slides a {
-    width: 19%;
+    width: 20%;
   }
+}
+section.webdesign .nav-slides a:after {
+  content: "";
+  display: block;
+  width: 1em;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #fff;
 }
 /*
 section steps
