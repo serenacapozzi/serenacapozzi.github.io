@@ -596,10 +596,10 @@ section.footer .skype:before {
   content: "\f105";
 }
 section.footer .behance:before {
-  content: "\f104";
+  content: "\f100";
 }
 section.footer .linkedin:before {
-  content: "\f100";
+  content: "\f104";
 }
 /*
 section files
