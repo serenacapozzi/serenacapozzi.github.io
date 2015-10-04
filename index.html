@@ -359,6 +359,11 @@
 
 
   <script>
+
+$('.img-and-video').one('mouseover', function (e) {
+    var $el = $(e.currentTarget).find('video[data-src]');
+    $el.attr('src', $el.data('src'));
+});
 //$(window).load(function () {
   //$('video[data-src]').each(function (i, el) {
     //var $el = $(el);
