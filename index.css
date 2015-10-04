@@ -159,35 +159,81 @@ a {
   padding-bottom: 1.5em;
   background-color: #342e35;
 }
+.rollover {
+  transition-duration: 1s;
+  background: #121013;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  color: #fff;
+  z-index: 2;
+  opacity: 0;
+}
+.rollover:hover {
+  opacity: 0.7;
+  transition-duration: 1s;
+}
+.rollover .subinner {
+  display: block;
+}
+.inner {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 219%;
+  margin: 0;
+  line-height: 1.2;
+  border-bottom: 1px solid #fff;
+}
+.subinner {
+  margin: 0;
+  font-style: italic;
+}
 /*
 section head
 */
 section.head .group {
   height: 100vh;
   overflow: hidden;
-}
-section.head .group +.img {
-  height: 38.1966012vh;
+  position: relative;
 }
 section.head .avatar {
   width: 5em;
   border-radius: 100%;
   border: 0.1em solid #999;
 }
+@media (min-width: 320px) {
+  section.head .avatar {
+    width: 7em;
+  }
+}
+@media (min-width: 768px) {
+  section.head .avatar {
+    width: 9em;
+  }
+}
 section.head .icon {
   color: #333;
   font-size: 700%;
 }
 section.head .typo {
-  font-size: 3em;
+  font-size: 300%;
   margin: 0;
   color: #666;
   font-family: "savoyeregular";
+}
+@media (min-width: 768px) {
+  section.head .typo {
+    font-size: 400%;
+  }
 }
 section.head .h1 {
   margin-top: 0.5em;
   margin-bottom: 0.2em;
   font-family: "roboto_slablight";
+  font-size: 150%;
 }
 section.head .h2 {
   margin-top: 0;
@@ -206,7 +252,7 @@ section.head .infos-head .h2 span {
   display: block;
 }
 section.head .contact-top p {
-  font-size: 0.8em;
+  font-size: 80%;
   font-family: "roboto_slablight";
 }
 section.head .contact-top p:first-child {
@@ -279,6 +325,7 @@ section.webdesign .h1 {
   margin: 0;
   font-family: "roboto_slablight";
   color: #fff;
+  font-size: 150%;
 }
 section.webdesign .p {
   margin-bottom: 1.5em;
@@ -327,38 +374,6 @@ section.webdesign .slide a >.in {
 }
 section.webdesign .slide:not(.active) {
   opacity: 0.75;
-}
-section.webdesign .rollover {
-  transition-duration: 1s;
-  background: #121013;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  color: #fff;
-  z-index: 2;
-  opacity: 0;
-}
-section.webdesign .rollover:hover {
-  opacity: 0.7;
-  transition-duration: 1s;
-}
-section.webdesign .rollover .subinner {
-  display: block;
-}
-section.webdesign .inner {
-  display: inline-block;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 219%;
-  margin: 0;
-  line-height: 1.2;
-  border-bottom: 1px solid #fff;
-}
-section.webdesign .subinner {
-  margin: 0;
-  font-style: italic;
 }
 @media (min-width: 1024px) {
   section.webdesign .img {
@@ -480,6 +495,7 @@ section experiments
 */
 section.experiments .h1 {
   margin-top: 0;
+  font-size: 150%;
 }
 section.experiments .p {
   margin-bottom: 0;
@@ -495,7 +511,7 @@ section.experiments .h1 {
 section.experiments .h2 {
   color: #666;
   font-family: "roboto_slablight";
-  font-size: 1em;
+  font-size: 100%;
 }
 section.experiments .p {
   line-height: 1.2;
@@ -510,23 +526,23 @@ section.experiments .item {
 section.experiments .item >a {
   display: block;
 }
-@media (min-device-width: 320px) {
+@media (min-width: 320px) {
   section.experiments .item {
     display: block;
     width: 100%;
   }
 }
-@media (min-device-width: 768px) {
+@media (min-width: 768px) {
   section.experiments .item {
     display: inline-block;
     width: 50%;
     vertical-align: top;
   }
 }
-@media (min-device-width: 1024px) {
+@media (min-width: 1024px) {
   section.experiments .item {
     display: inline-block;
-    width: 50%;
+    width: 33.333333%;
   }
 }
 section.experiments .img {
@@ -570,6 +586,52 @@ section.experiments .img-and-video:hover .img {
 section.experiments .img-and-video:hover video {
   opacity: 1;
   z-index: 1;
+}
+/* 
+section graphics
+ */
+section.graphics .title {
+  background-color: #342e35;
+}
+section.graphics .h1 {
+  margin: 0;
+  color: #fff;
+  font-family: "roboto_slablight";
+  font-size: 150%;
+}
+section.graphics .size-inner {
+  margin: 0;
+  color: #fff;
+  font-family: "roboto_slablight";
+  font-size: 100%;
+}
+section.graphics .h2 {
+  font-family: "roboto_slablight";
+  font-size: 80%;
+  font-weight: 100;
+}
+section.graphics .compo {
+  display: block;
+  width: 100%;
+  vertical-align: top;
+  position: relative;
+  padding-right: 0.1em;
+  padding-bottom: 0.1em;
+}
+section.graphics .img {
+  vertical-align: top;
+  display: block;
+}
+section.graphics .subinner {
+  margin: 0;
+  font-style: italic;
+  font-size: 80%;
+}
+@media (min-width: 768px) {
+  section.graphics .compo {
+    display: inline-block;
+    width: 20%;
+  }
 }
 /*
 section footer

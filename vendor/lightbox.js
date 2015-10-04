@@ -276,7 +276,7 @@ Lightbox.prototype.remove = function () {
 
   if (this.options.transitionduration > 0 && this.has3d) {
     // find the corresponding small image in the gallery that matches the displayed (into $img) one
-    var $smallimg = this.$links.filter(function (i, el) {return $(el).attr('href') === this.$img.attr('src');}.bind(this));
+    var $smallimg = this.$links.filter(function (i, el) {return $(el).attr('href') === this.$img.attr('src');}.bind(this)).find('img');
     
     this.zoomout($smallimg, thenRemove);
   } else {
@@ -334,12 +334,16 @@ Lightbox.prototype.zoomin = function ($smallimg, cb) {
   var tx = (smallimgDims.l + smallimgDims.w/2) - (imgDims.l + imgDims.w/2); // centers' Δx
   var ty = (smallimgDims.t + smallimgDims.h/2) - (imgDims.t + imgDims.h/2); // centers' Δy
   var s = Math.min(smallimgDims.w / imgDims.w, smallimgDims.h / imgDims.h);
-  this.$img.css({transform: 'translate3d('+tx+'px,'+ty+'px, 0) scale3d('+s+','+s+','+s+')'});
+  this.$img.css({
+    transform: 'translate3d('+tx+'px,'+ty+'px, 0) scale3d('+s+','+s+','+s+')',
+    //opacity: 0
+  });
   setTimeout(function () {
     // then, undo with a transition
     this.$img.css({
-      transition: 'all ' + this.options.transitionduration + 'ms',
-      transform: 'translate3d(0,0,0) scale3d(1,1,1)'
+      transition: 'transform ' + this.options.transitionduration + 'ms',
+      transform: 'translate3d(0,0,0) scale3d(1,1,1)',
+      //opacity: 1
     });
 
     // cb
@@ -353,9 +357,12 @@ Lightbox.prototype.zoomout = function ($smallimg, cb) {
   var smallimgDims = dims($smallimg);
   var imgDims = dims(this.$img);
 
+  console.log(smallimgDims, imgDims);
+
   this.$img.css({
-    transition: 'all ' + this.options.transitionduration + 'ms',
-    transform: 'translate3d(0,0,0) scale3d(1,1,1)'
+    transition: 'transform ' + this.options.transitionduration + 'ms',
+    transform: 'translate3d(0,0,0) scale3d(1,1,1)',
+    //opacity: 1
   });
   setTimeout(function () {
     var tx = (smallimgDims.l + smallimgDims.w/2) - (imgDims.l + imgDims.w/2); // centers' Δx
@@ -363,6 +370,7 @@ Lightbox.prototype.zoomout = function ($smallimg, cb) {
     var s = Math.min(smallimgDims.w / imgDims.w, smallimgDims.h / imgDims.h);
     this.$img.css({
       transform: 'translate3d('+tx+'px,'+ty+'px, 0) scale3d('+s+','+s+','+s+')',
+      //opacity: 0
     });
 
     // cb
