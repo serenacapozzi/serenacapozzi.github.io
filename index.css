@@ -155,8 +155,8 @@ a {
   }
 }
 .title {
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
+  padding-top: 3.5em;
+  padding-bottom: 3.5em;
   background-color: #342e35;
 }
 .rollover {
@@ -341,23 +341,9 @@ section.webdesign a {
 section.webdesign .slides .img >img {
   width: 100%;
 }
-section.webdesign .nav-slides {
-  overflow: auto;
-}
-section.webdesign .nav-slides.carouselscrollview {
-  overflow: hidden;
-}
-section.webdesign .slides {
-  overflow: auto;
-}
-section.webdesign .slides.carouselscrollview {
-  overflow: hidden;
-}
-section.webdesign .slides >.in {
-  white-space: nowrap;
-}
 section.webdesign .slide {
   display: inline-block;
+  vertical-align: top;
   width: 100%;
   background-color: #ccc;
 }
@@ -372,15 +358,12 @@ section.webdesign .slide a >.in {
   top: 0;
   bottom: 0;
 }
-section.webdesign .slide:not(.active) {
-  opacity: 0.75;
-}
 @media (min-width: 1024px) {
   section.webdesign .img {
     display: block;
   }
   section.webdesign .slide {
-    width: 33.333333%;
+    width: 50%;
   }
   section.webdesign .inner {
     font-size: 100%;
@@ -405,38 +388,6 @@ section.webdesign .shadow:after {
   border-left: 1em solid #fff;
   border-right: 1em solid #fff;
   pointer-events: none;
-}
-section.webdesign .nav-slides {
-  white-space: nowrap;
-  overflow: auto;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-section.webdesign .nav-slides a {
-  display: inline-block;
-  vertical-align: top;
-  height: 2.6em;
-  background: #d0d0d0;
-  width: 33.333333333333336%;
-  position: relative;
-}
-section.webdesign .nav-slides a.active {
-  background: #342e35;
-}
-@media (min-width: 1024px) {
-  section.webdesign .nav-slides a {
-    width: 20%;
-  }
-}
-section.webdesign .nav-slides a:after {
-  content: "";
-  display: block;
-  width: 1em;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  background: #fff;
 }
 /*
 section steps
