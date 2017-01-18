@@ -472,7 +472,7 @@ section.head .infos-head .h2 span {
 section.head .contact-top p {
   display: inline-block;
   margin: 0;
-  font-size: 150%;
+  font-size: 80%;
   font-family: "roboto_slablight";
 }
 @media (min-width: 1024px) {
