@@ -44,7 +44,6 @@ body {
   margin: 0;
   font: 400 100%/1.5 arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  background-color: #141414;
 }
 @media (min-device-width: 768px) {
   body {
@@ -93,6 +92,10 @@ a {
 }
 * {
   -webkit-tap-highlight-color: transparent;
+}
+/* carouselscrollview */
+.carouselscrollview >.in {
+  transition: transform 0.3s;
 }
 /* clearfix */
 .cf:before,
@@ -154,7 +157,7 @@ a {
 .title {
   padding-top: 3.5em;
   padding-bottom: 3.5em;
-/*background-color:#342e35;*/
+  background-color: #342e35;
 }
 .rollover {
   transition-duration: 1s;
@@ -188,249 +191,17 @@ a {
   margin: 0;
   font-style: italic;
 }
-.hover {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  background-image: url("images/iPad.gif");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  opacity: 0.2;
-}
-.hover-footer {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  background-image: url("images/testv1.gif");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  opacity: 0.2;
-}
 /*
 section head
 */
-section.head {
-  position: relative;
-/* Build the Animation */
-/* Call the Animation */
-/*.content {
-    position: absolute;
-    top:50%;left:50%;
-    transform:translate(-50%, -50%);
-    font-size:35px;
-    line-height:40px;
-    font-family: 'Lato', sans-serif;
-    color: #ecf0f1;
-    height: 160px;
-    overflow:hidden;
-  }
-
-  .visible {
-    font-weight:600;
-    overflow:hidden;
-    height:40px;
-    padding:0 40px;
-    
-    &:before {
-      content:'[';
-      left: 0;
-      line-height:40px;
-    }
-    &:after {
-      content:']';
-      position:absolute;
-      right: 0;
-      line-height:40px;
-    }
-    &:after, &:before {
-      position:absolute;
-      top:0;
-      color:#16a085;
-      font-size:42px;
-      -webkit-animation-name: opacity;
-      -webkit-animation-duration: 2s;
-      -webkit-animation-iteration-count: infinite;
-      animation-name: opacity;
-      animation-duration: 2s;
-      animation-iteration-count: infinite;
-
-    }
-  }
-
-  p {
-    display:inline;
-    float:left;
-    margin:0;
-  }
-
-  ul {
-    margin-top:0;
-    padding-left:110px;
-    text-align:left;
-    list-style:none;
-    -webkit-animation-name: change;
-    -webkit-animation-duration: 6s;
-    -webkit-animation-iteration-count: infinite;
-    animation-name: change;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-  }
-
-  ul li {
-    line-height:40px;
-    margin:0;
-  }
-
-  @-webkit-keyframes opacity {
-    0%, 100% {opacity:0;}
-    50% {opacity:1;}
-  }
-
-  @-webkit-keyframes change {
-    0%, 12%, 100% {transform:translateY(0);}
-    17%,29% {transform:translateY(-25%);}
-    34%,46% {transform:translateY(-50%);}
-    51%,63% {transform:translateY(-75%);}
-    68%,80% {transform:translateY(-50%);}
-    85%,97% {transform:translateY(-25%);}
-  }
-
-  @keyframes opacity {
-    0%, 100% {opacity:0;}
-    50% {opacity:1;}
-  }
-
-  @keyframes change {
-    0%, 12%, 100% {transform:translateY(0);}
-    17%,29% {transform:translateY(-25%);}
-    34%,46% {transform:translateY(-50%);}
-    51%,63% {transform:translateY(-75%);}
-    68%,80% {transform:translateY(-50%);}
-    85%,97% {transform:translateY(-25%);}
-  }*/
-}
 section.head .group {
-  height: 100vh;
   overflow: hidden;
   position: relative;
-}
-section.head .in {
-  color: #fff;
-}
-@media (min-width: 1024px) {
-  section.head .in {
-    padding-left: 3em;
-  }
-}
-@-webkit-keyframes aniload {
-  from {
-    -webkit-transform: translate(0%, -50%);
-  }
-  to {
-    -webkit-transform: translate(0%, 0%);
-  }
-}
-@-moz-keyframes aniload {
-  from {
-    -moz-transform: translate(0%, -50%);
-  }
-  to {
-    -moz-transform: translate(0%, 0%);
-  }
-}
-@-ms-keyframes aniload {
-  from {
-    -ms-transform: translate(0%, -50%);
-  }
-  to {
-    -ms-transform: translate(0%, 0%);
-  }
-}
-@-o-keyframes aniload {
-  from {
-    -o-transform: translate(0%, -50%);
-  }
-  to {
-    -o-transform: translate(0%, 0%);
-  }
-}
-@-webkit-keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-moz-keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-ms-keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-o-keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-section.head .in {
-  -webkit-animation: aniload 2s;
-  -moz-animation: aniload 2s;
-  -ms-animation: aniload 2s;
-  -o-animation: aniload 2s;
-  animation: aniload 2s;
-}
-section.head .in > div {
-  -webkit-animation-name: opacity;
-  -moz-animation-name: opacity;
-  -ms-animation-name: opacity;
-  -o-animation-name: opacity;
-  -webkit-animation-duration: 2s;
-  -moz-animation-duration: 2s;
-  -ms-animation-duration: 2s;
-  -o-animation-duration: 2s;
-}
-@media (max-width: 1023px) {
-  section.head .in {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
 }
 section.head .avatar {
   width: 5em;
   border-radius: 100%;
   border: 0.1em solid #999;
-}
-@media (min-width: 320px) {
-  section.head .avatar {
-    width: 7em;
-  }
-}
-@media (min-width: 768px) {
-  section.head .avatar {
-    width: 9em;
-  }
 }
 section.head .icon {
   color: #333;
@@ -450,8 +221,14 @@ section.head .typo {
 section.head .h1 {
   margin-top: 0.5em;
   margin-bottom: 0.2em;
-  font-family: "roboto_slablight";
-  font-size: 150%;
+  font-family: "arial";
+  font-size: 250%;
+  font-weight: 800;
+}
+@media (min-width: 768px) {
+  section.head .h1 {
+    font-size: 400%;
+  }
 }
 section.head .h2 {
   margin-top: 0;
@@ -470,10 +247,19 @@ section.head .infos-head .h2 span {
   display: block;
 }
 section.head .contact-top p {
-  display: inline-block;
-  margin: 0;
   font-size: 80%;
   font-family: "roboto_slablight";
+}
+section.head .contact-top p:first-child {
+  margin-bottom: 0;
+  margin-top: 0.1em;
+}
+section.head .contact-top p:last-child {
+  margin-top: 0;
+}
+section.head .in {
+  padding-top: 3em;
+  padding-bottom: 1.5em;
 }
 @media (min-width: 1024px) {
   section.head .typo {
@@ -506,73 +292,34 @@ section.head .contact-top p {
     margin-right: 1em;
   }
 }
-@-moz-keyframes aniload {
-  from {
-    transform: translate(0%, -50%);
-  }
-  to {
-    transform: translate(0%, 0%);
-  }
-}
-@-webkit-keyframes aniload {
-  from {
-    transform: translate(0%, -50%);
-  }
-  to {
-    transform: translate(0%, 0%);
-  }
-}
-@-o-keyframes aniload {
-  from {
-    transform: translate(0%, -50%);
-  }
-  to {
-    transform: translate(0%, 0%);
-  }
-}
-@keyframes aniload {
-  from {
-    transform: translate(0%, -50%);
-  }
-  to {
-    transform: translate(0%, 0%);
-  }
-}
-@-moz-keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-o-keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 /*
 section webdesign
 */
+section.webdesign {
+  padding-top: 1.5em;
+/*  #lightbox {
+    position:fixed; /* keeps the lightbox window in the current viewport
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.46);
+    text-align:center;
+
+    p{text-align:right;
+      color:#fff;
+      margin-right:20px;
+      font-size:12px; }
+
+      img {
+        box-shadow:0 0 25px #111;
+        -webkit-box-shadow:0 0 25px #111;
+        -moz-box-shadow:0 0 25px #111;
+        max-width:940px;
+    }
+
+  } */
+}
 section.webdesign .h1 {
   margin: 0;
   font-family: "roboto_slablight";
@@ -702,6 +449,9 @@ section.experiments .h1 {
 }
 section.experiments .p {
   margin-bottom: 0;
+}
+section.experiments .title {
+  background-color: #342e35;
 }
 section.experiments .h1 {
   margin-bottom: 0;
@@ -837,8 +587,6 @@ section.graphics .subinner {
 section footer
 */
 section.footer {
-  position: relative;
-  color: #fff;
   padding-top: 1.5em;
 /* icons steps */
 }
@@ -854,7 +602,7 @@ section.footer p {
 section.footer .socials .icon {
   display: inline-block;
   font-size: 200%;
-  color: #fff;
+  color: #333;
 }
 section.footer .skype:before {
   content: "\f105";
@@ -864,20 +612,6 @@ section.footer .behance:before {
 }
 section.footer .linkedin:before {
   content: "\f104";
-}
-/*
-section files
-*/
-section.list {
-  color: #fff;
-}
-section.list p {
-  font-size: 80%;
-  margin: 0;
-  font-family: "roboto_slablight";
-  border-top: 1px solid #ccc;
-  padding-top: 0.3em;
-  padding-bottom: 0.3em;
 }
 /*
 lightbox
