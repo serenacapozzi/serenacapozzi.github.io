@@ -224,6 +224,7 @@ section.head .h1 {
   font-family: "arial";
   font-size: 250%;
   font-weight: 800;
+  letter-spacing: -3px;
 }
 @media (min-width: 768px) {
   section.head .h1 {
